@@ -1,20 +1,39 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
-import Quiz from './components/Quiz'
-import Score from './components/Score'
+import React, { useState } from "react";
+import Home from "./components/Home";
+import Quiz from "./components/Quiz";
+import Score from "./components/Score";
 
 
-export default function App() {
-return (
-<div className="min-h-screen flex items-center justify-center p-4">
-<div className="w-full max-w-3xl">
-<Routes>
-<Route path="/" element={<Home />} />
-<Route path="/quiz" element={<Quiz />} />
-<Route path="/score" element={<Score />} />
-</Routes>
-</div>
-</div>
-)
+function App() {
+  const [questions, setQuestions] = useState([]);
+  const [score, setScore] = useState(0);
+  const [stage, setStage] = useState("home");
+
+  const startQuiz = async (amount, difficulty) => {
+    const url = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    setQuestions(data.results);
+    setScore(0);
+    setStage("quiz");
+  };
+
+  const finishQuiz = (finalScore) => {
+    setScore(finalScore);
+    setStage("score");
+  };
+
+  return (
+    <div>
+      {stage === "home" && <Home startQuiz={startQuiz} />}
+      {stage === "quiz" && (
+        <Quiz questions={questions} finishQuiz={finishQuiz} />
+      )}
+      {stage === "score" && <Score score={score} total={questions.length} />}
+
+    </div>
+  );
 }
+
+export default App;
