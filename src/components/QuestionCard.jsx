@@ -8,7 +8,7 @@ function decodeHtml(html) {
 
 export default function QuestionCard({ question, answers, selected, onSelect }) {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-lg">
+    <div className="bg-white rounded-2xl p-7 shadow-lg">
       <div className="mb-5 text-lg font-semibold text-gray-800">
         {decodeHtml(question.question)}
       </div>
