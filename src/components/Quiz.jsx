@@ -12,7 +12,12 @@ export default function Quiz({ questions, finishQuiz }) {
     }
   }, [index, questions, score, finishQuiz]);
 
-  if (!current) return <div className="text-center">Loading...</div>;
+  if (!current)
+    return (
+      <div className="min-h-screen flex items-center justify-center text-lg font-medium text-gray-600">
+        Loading quiz...
+      </div>
+    );
 
   function handleSelect(answer) {
     submitAnswer(answer);
@@ -20,17 +25,25 @@ export default function Quiz({ questions, finishQuiz }) {
   }
 
   return (
-    <div>
-      <div className="mb-4 text-sm">
-        Question {index + 1} / {questions.length}
-      </div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 px-4">
+      <div className="w-full max-w-2xl">
+        {/* Progress */}
+        <div className="mb-4 text-sm text-gray-600 flex justify-between">
+          <span>
+            Question <strong>{index + 1}</strong> / {questions.length}
+          </span>
+          <span className="font-semibold text-blue-600">
+            Score: {score}
+          </span>
+        </div>
 
-      <QuestionCard
-        question={current}
-        answers={answers}
-        selected={selected}
-        onSelect={handleSelect}
-      />
+        <QuestionCard
+          question={current}
+          answers={answers}
+          selected={selected}
+          onSelect={handleSelect}
+        />
+      </div>
     </div>
   );
 }
