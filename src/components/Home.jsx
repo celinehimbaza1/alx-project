@@ -9,20 +9,20 @@ const Home = ({ startQuiz }) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-lg">
-        <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 px-4">
+      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-lg transition-transform duration-300 hover:scale-[1.01]">
+        <h1 className="text-3xl font-extrabold text-center mb-6 text-blue-700">
           Quick Quiz
         </h1>
 
         {/* Number of Questions */}
         <div className="mb-5">
-          <label className="block text-gray-700 font-medium mb-2">
+          <label className="block text-gray-700 font-semibold mb-2">
             Number of Questions
           </label>
           <input
             type="number"
-            className="w-full p-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
+            className="w-full p-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
             value={amount}
             min={1}
             max={50}
@@ -32,11 +32,11 @@ const Home = ({ startQuiz }) => {
 
         {/* Difficulty */}
         <div className="mb-6">
-          <label className="block text-gray-700 font-medium mb-2">
+          <label className="block text-gray-700 font-semibold mb-2">
             Difficulty
           </label>
           <select
-            className="w-full p-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
+            className="w-full p-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
             value={difficulty}
             onChange={(e) => setDifficulty(e.target.value)}
           >
@@ -49,7 +49,7 @@ const Home = ({ startQuiz }) => {
         {/* Start Button */}
         <button
           onClick={handleStart}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl text-lg font-semibold transition-all"
+          className="w-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white py-3 rounded-xl text-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
         >
           Start Quiz
         </button>
