@@ -12,7 +12,7 @@ const Home = ({ startQuiz }) => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 px-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-lg transition-transform duration-300 hover:scale-[1.01]">
         <h1 className="text-3xl font-extrabold text-center mb-6 text-blue-700">
-          Quick Quiz
+          Quiz App
         </h1>
 
         {/* Number of Questions */}
