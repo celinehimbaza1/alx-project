@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+Quiz App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+This is a Quiz Application created as my capstone project during the program.
+The app allows users to answer multiple-choice questions and see their score at the end.
 
-In the project directory, you can run:
+The project focuses on building a functional and user-friendly web application while applying the skills learned during the capstone phase.
 
-### `npm start`
+What Problem Does It Solve?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Quiz App provides a simple and interactive way for users to test their knowledge.
+It can be used for learning, practice, or just for fun.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Key Features
 
-### `npm test`
+Users can start a quiz easily
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Multiple-choice questions
 
-### `npm run build`
+Users select answers and move to the next question
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Final score is displayed at the end of the quiz
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clean and easy-to-use interface
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Works on different screen sizes
 
-### `npm run eject`
+Some features may still have small bugs, which is normal during development and learning.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+How the App Works
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The user starts the quiz
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Questions are displayed one by one
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The user selects an answer for each question
 
-## Learn More
+At the end, the app shows the final score
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Project Status
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was built from scratch during the capstone period.
+It is a working application and represents my learning progress as a front-end developer.
 
-### Code Splitting
+Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A short video demonstration of the app was recorded using Loom and submitted as part of the capstone requirements.
 
-### Analyzing the Bundle Size
+Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Celine
+Front-End Developer 
+Capstone Project – 2025
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
